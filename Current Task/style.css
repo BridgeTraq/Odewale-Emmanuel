@@ -20,7 +20,8 @@
 
 }
 
-/* global styles */
+/* ------------- GLOBAL STYLE ------------- */
+
 *,
 *:not(i)::before,
 *::after {
@@ -67,7 +68,10 @@ ul {
     list-style: none;
 }
 
-/* global styling for all btn-group */
+/* ------------- END OF GLOBAL STYLE ------------- */
+
+
+/* ------------- GLOBAL BUTTON GROUP ------------- */
 .button-group {
     display: flex;
     justify-content: center;
@@ -113,8 +117,9 @@ ul {
     font-weight: 600;
 }
 
+/* ------------- END OF GLOBAL BUTTON GROUP ------------- */
 
-/* nav style */
+/* ------------------  NAV -----------------*/
 #nav-bar,
 .logo-area,
 .nav-links,
@@ -167,14 +172,17 @@ ul {
     background-color: var(--orange, #e06b15);
 }
 
+/* ------------------ END OF NAV -----------------*/
 
 
-/* header style */
+
+/* ------------------ HEADER -----------------*/
+
 header {
     display: flex;
     flex-direction: column;
     row-gap: 2em;
-    padding: 3.5em 0 17em 0;
+    padding: 3.5em 0 7em 0;
     /* background-color: #3098d2; */
 }
 
@@ -212,108 +220,362 @@ header .button-group i[class*="fa-google-play"] {
     color: var(--green, #00613b);
 }
 
+/* ------------------ END OF HEADER -----------------*/
 
 
-/* -> info-section style */
+/* ------------------GLOBAL PHONE OVERFLOW -----------------*/
+.info-section,
+.fix-section-2 {
+    width: 93.5%;
+    margin: auto;
+}
+
+.phone-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.info-section,
+.fix-section-2,
+.phone-base-section {
+    display: grid;
+}
+
+.info-section ul.phone-parts,
+.fix-section-2 ul.phone-parts,
+.phone-display,
+.phone-button-group {
+    display: flex;
+}
+
+.info-section .phone-parts img,
+.fix-section-2 .phone-parts img {
+    /* width: 40px;
+    height: 40px; */
+    object-fit: contain;
+}
+
+/* PHONE Image  */
+img.phone {
+    /* width: 370px;
+    object-fit: cover; */
+    border-radius: calc(3em + 1vw);
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.phone-base-section {
+    border-radius: 1.75em;
+    padding: 4.5em;
+    overflow: hidden;
+
+}
+
+/* ----------------- END OF GLOBAL PHONE OVERFLOW ------------*/
+
+
+/*---------------------- INFO SECTION -------------------- */
 
 .info-section {
-    background-color: var(--green, #00613b);
-    border-radius: 1.7em;
-    min-height: 70vh;
-    width: 90%;
-    margin: auto;
-    color: var(--white, #ffffff);
-    display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
-    padding: 4em;
-    column-gap: 3em;
+    grid-template-rows: 15.87em 500px 4.5em;
+    /* border: 1px solid orange; */
+    column-gap: 1.5em;
+    color: var(--white, #ffffff);
 }
 
 .info-section * {
     color: inherit;
 }
 
-.info-item-1 {
+.info-section .phone-section {
+    z-index: 1;
+    /* border: 1px solid salmon; */
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.info-section .phone {
+    z-index: 1;
+    background-image: linear-gradient(to top, var(--green) 66%, var(--secondaryGreen3) 66%);
+}
+
+.phone-display {
+    z-index: 2;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    max-width: 240px;
+    row-gap: 2em;
+    width: 90%;
+    /* border: 1px solid gold; */
+}
+
+.info-section .phone-parts {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 10%;
+    /* border: 1px solid gold; */
+}
+
+.info-section .phone-parts li {
+    position: absolute;
+    transform-origin: center;
+}
+
+
+/* PHONE PART IMAGE AND POSITION */
+/* TODO - make images shrink base on screen size using calc  */
+li.hammer {
+    top: -3em;
+    left: -20em;
+}
+
+li.hammer img {
+    width: 300px;
+    height: 300px;
+    transform: rotate(-5deg);
+}
+
+li.roller {
+    top: -4em;
+    right: -23em;
+}
+
+li.roller img {
+    width: 300px;
+    height: 300px;
+    transform: rotate(-1deg);
+}
+
+li.left-nail-1 {
+    top: -4em;
+    left: -21em;
+}
+
+li.left-nail-1 img {
+    width: 80px;
+    height: 80px;
+    transform: rotate(65deg);
+}
+
+li.left-nail-2 {
+    top: 4em;
+    left: -20em;
+}
+
+li.left-nail-2 img {
+    width: 80px;
+    height: 80px;
+    transform: rotate(-45deg);
+
+}
+
+li.right-nail-1 {
+    top: -4em;
+    right: -20em;
+}
+
+li.right-nail-1 img {
+    width: 80px;
+    height: 80px;
+    transform: rotate(95deg);
+
+}
+
+li.right-nail-2 {
+    top: -6.7em;
+    right: -9em;
+}
+
+li.right-nail-2 img {
+    width: 80px;
+    height: 80px;
+    transform: rotate(15deg);
+
+}
+
+/* END OF PHONE PART IMAGE AND POSITION */
+
+
+.phone-display .phone-item {
+    flex-grow: 1;
+    display: flex;
+}
+
+.phone-item:not(.phone-item-3) {
+    display: flex;
+    align-items: flex-end;
+}
+
+.phone-item-1 img {
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.phone-item-2 h3 {
+    font-size: calc(1.35em + .05vw);
+    font-weight: 400;
+    line-height: 1.25;
+
+}
+
+
+.phone-display .phone-item-3 {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2em;
+}
+
+.phone-button-group {
+    row-gap: .4em;
+    flex-direction: column;
+}
+
+.phone-button-group :first-child {
+    background-color: var(--white, #ffffff);
+    color: var(--green, #00613b);
+}
+
+.phone-button-group :last-child {
+    color: var(--white, #ffffff);
+    background-color: var(--orange, #e06b15);
+}
+
+.phone-button {
+    padding: .5em;
+    border-radius: 1em;
+}
+
+.info-section .phone-base-section {
+    background-color: var(--green, #00613b);
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-column: 1 / -1;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+.info-section .base-item-1 {
+    grid-column-start: 1;
     align-self: center;
     font-family: var(--roboto);
-    font-size: calc(1.3em + 1.5vw);
+    font-size: calc(1.3em + 1.65vw);
     font-weight: 400;
     letter-spacing: -2px;
     line-height: 1.05;
 }
 
+.info-section .base-item-2 {
+    grid-column-start: 3;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3em;
+}
+
+.info-section .base-item-2 li {
+    display: flex;
+    column-gap: 1.5em;
+    align-items: flex-start;
+}
+
+.info-section .base-item-2 li i.icon {
+    font-size: calc(.95em + .95vw);
+    color: #80ad93;
+}
+
+.info-section .base-item-2 li p {
+    font-family: var(--roboto);
+    font-size: calc(.8em + .95vw);
+    /* letter-spacing: -2px; */
+    line-height: 1.05;
+    font-weight: 300;
+
+}
+
+/*----------------------END OF INFO SECTION -------------------- */
+
+/*-------------------------- STEP SECTION ---------------------- */
+.steps-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3em;
+    padding: 6em 0;
+}
+
+img.tool-box {
+    display: block;
+    margin: auto;
+    width: 80%;
+    max-width: 500px;
+    height: 400px;
+    aspect-ratio: 4/4;
+    object-fit: contain;
+}
+
+.steps-section>h2 {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    font-size: calc(1.55em + 1vw);
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: center;
+}
+
+/*----------------------END OF STEP SECTION -------------------- */
 
 
-/* Fix-Section-2 styles */
+/*----------------------- FIX-SECTION-2 ------------------------- */
 
 .fix-section-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 4em;
-    border-radius: 1.7em;
-    min-height: 70vh;
-    width: 90%;
-    margin: auto;
-    background-color: #fff;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 15.87em 500px 4.5em;
+    column-gap: 1.5em;
 }
 
-
-.fix-section-2 .button-group .button {
-    background-color: var(--orange);
-
+.fix-section-2 .phone-section {
+    z-index: 1;
+    border: 1px solid salmon;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
-.fix-section-2>div:nth-child(2) {
+.fix-section-2 .phone {
+    margin: 0 auto 0 8.5em;
+    background-color: var(--white);
+}
+
+.fix-section-2 .phone-base-section {
+    background-color: var(--white, #ffffff);
+    grid-template-columns: 1.5fr 1fr;
+    grid-column: 1 / -1;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+.fix-section-2 .base-item-1 {
+    grid-column-start: 2;
+    align-content: center;
     display: flex;
     flex-direction: column;
-    height: 85%;
-    row-gap: 1.4em;
-}
-
-.fix-section-2> :nth-child(2) h1 {
-    align-self: center;
-    font-family: var(--roboto);
-    font-size: calc(1.3em + 1.5vw);
-    font-weight: 400;
-    letter-spacing: -2px;
-    line-height: 1.05;
-}
-
-.fix-section-2> :nth-child(2) p {
-    font-size: calc(.8em + .05vw);
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.fix-section-2 .button-group span,
-.fix-section-2 .button-group p,
-.fix-section-2 .button-group i {
-    color: var(--white, #ffffff) !important;
-}
-
-
-/* phone display global */
-.phone-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translate(0%, -28%);
-}
-
-.phone-section>* {
-    width: 370px;
+    row-gap: 1em;
+    width: 80%;
     margin: auto;
 }
 
-.phone {
-    background-color: #3098d2;
-    overflow: hidden;
-    border-radius: 59px;
-    margin: auto;
-}
-
-.phone-display {}
-
-
-/* step card phone global */
+/*------------------------END OF FIX-SECTION-2 ------------------ */
