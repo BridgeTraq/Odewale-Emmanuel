@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="odewale_mdee">
+    <meta property="og:description" content="BridgeTraq Task 0">
+    <meta property="og:image" content="https://i.ibb.co/4g2Mg7m/mdee-3.png">
+    <meta property="og:url" content="http://odewale_mdee.surge.sh">
+    <title>Agba Techbro</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+    ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* global styling */
+        :root {
+            --black: #111111;
+            --white: #ffffff;
+            --yellow: #e4f048;
+            --blue: #1672e8;
+            --green: #2e8852;
+            --red: #e63232;
+            --yellow: #e4f048;
+            --card-grey: #f1f1f9;
+            --bg-grey: #d5d5da;
+            --light-red: #fbe0de;
+            --light-green: #dfece4;
+            --grey1: #727272;
+            --grey2: #686868;
+            --grey3: #f7f7f7;
+            --grey4: #cecece;
+            --grey5: #d1d1d1;
+            --grey6: #6f6f6f;
+            --grey7: #fbfbfb;
+            --grey8: #f1f1f9;
+
+        }
+
+        * {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        div.chopped-card {
+            position: relative;
+        }
+
+        div.chopped-card::before {
+            position: absolute;
+            content: "";
+            left: -35px;
+            bottom: -13px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: var(--bg-grey);
+        }
+
+        div.chopped-card::after {
+            position: absolute;
+            content: "";
+            right: -35px;
+            bottom: -13px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: var(--bg-grey);
+        }
+
+        .grp,
+        .grp-1,
+        .grp-2 {
+            color: var(--grey1)
+        }
+
+        .grp-1 {
+            font-size: 13px;
+        }
+
+        .grp-2,
+        .grp-x {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body style="background-color: var(--bg-grey);">
+    <!-- coded on a display resolution ==> 1920 x 1080 -->
+    <div id="container"
+        style="display: flex; gap: 1.8em; padding: 2.3em 2.5em; min-height: 100vh; background-color: var(--bg-grey); max-width: 1400px; margin: auto;">
+        <nav
+            style="min-width: 120px; max-width: auto; background-color: var(--white); border-radius: 28px; display: inline-flex; flex-direction: column; justify-content: space-between; padding: 1.4em 0; align-items: center;">
+
+            <div class="nav-item logo-area"
+                style="display: inline-flex; flex-direction: column; row-gap: 40px; align-items: center;">
+                <div style="display: inline-flex; column-gap: 5px; align-self: start; margin-left: -10px;">
+                    <div style="width: 9px; height: 9px; border-radius: 50%; background-color: orangered;"></div>
+                    <div style="width: 9px; height: 9px; border-radius: 50%; background-color: gold;"></div>
+                    <div style="width: 9px; height: 9px; border-radius: 50%; background-color: var(--green);"></div>
+                </div>
+                <span
+                    style="background-color: var(--blue); color: var(--white); border-radius: 20px; height: 60px; width: 60px; display: inline-flex; justify-content: center; align-items: center;"><i
+                        class="la la-2x la-cloud"></i></span>
+            </div>
+
+
+            <div class="nav-item  icon-area"
+                style="display: inline-flex; align-items: center; flex-direction: column; row-gap: 5px;">
+                <span
+                    style="color: var(--white); border-radius: 20px; background-color: var(--black); box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.287), -5px -5px 25px rgba(0, 0, 0, 0.287); height: 60px; width: 60px; display: inline-flex; justify-content: center; align-items: center;"><i
+                        class="la la-2x la-home"></i></span>
+                <span
+                    style="height: 60px; width: 60px; color: var(--grey2); display: inline-flex; justify-content: center; align-items: center;"><i
+                        class="la la-2x la-search"></i></span>
+                <span
+                    style="height: 60px; width: 60px; color: var(--grey2); display: inline-flex; justify-content: center; align-items: center;"><i
+                        class="la la-2x la-history"></i></span>
+                <span
+                    style="height: 60px; width: 60px; color: var(--grey2); display: inline-flex; justify-content: center; align-items: center;"><i
+                        class="la la-2x la-video"></i></span>
+            </div>
+
+            <div class="nav-item gen-dp-area" style="display: inline-flex; flex-direction: column; row-gap: 15px;">
+                <div
+                    style="width: 58px; height: 58px; display: inline-flex; justify-content: center; align-items: center;">
+                    <img src="./Asset/dp-small.jpg" alt="dp-image"
+                        style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div
+                    style="width: 58px; height: 58px; display: inline-flex; justify-content: center; align-items: center;">
+                    <img src="./Asset/dp2-small.jpg" alt="dp-image"
+                        style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div
+                    style="width: 58px; height: 58px; display: inline-flex; justify-content: center; align-items: center;">
+                    <img src="./Asset/dp3-small.jpg" alt="dp-image"
+                        style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                </div>
+
+            </div>
+
+            <div class="nav-item profile-dp-area"
+                style="display: inline-flex; flex-direction: column; row-gap: 20px; align-items: center;">
+                <hr style="border: none; border-radius: 3px; background-color: var(--grey5); width: 40%; height: 1px;">
+                <div
+                    style="width: 60px; height: 60px; display: inline-flex; justify-content: center; align-items: center;">
+                    <img src="./Asset/mdee (3).png" alt="profile-dp-image"
+                        style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                </div>
+            </div>
+        </nav>
+
+        <main
+            style="flex-grow: 1; display: grid; grid-template-columns: repeat(18, 1fr); grid-template-rows: repeat(22, 1fr); gap: 1.5em;">
+            <div class="x-card"
+                style="grid-column-start: 1; grid-column-end: 9; grid-row-start: 1; grid-row-end: 9; background-color: var(--black); border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between; background: url('./Asset/img26.jpg') no-repeat; background-size: cover; padding: 1.8em; color: var(--white)">
+                <div style="display: grid; grid-template-columns: 1fr auto; column-gap: 15px;  align-items: baseline;">
+                    <div>
+                        <h2 style="font-size: 1.30em; line-height: 1.45; text-transform: capitalize; font-weight: 600;">
+                            Unveiling masterpieces: A Journey Through Creative Artistry </h2>
+                    </div>
+                    <div><i class="la la-lg la-expand"></i></div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; column-gap: 25px;">
+                    <div><i style="color: var(--grey8)" class="fa fa-2x  fa-step-backward"></i></div>
+                    <div><i class="fa fa-4x fa-circle-play"></i></div>
+                    <div><i style="color: var(--grey8)" class="fa fa-2x fa-step-forward"></i></div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr auto; column-gap: 15px;">
+                    <div style="display: flex; flex-direction: column; row-gap: 10px;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; font-weight: 100; color: var(--grey4);">
+                            <span>06:20</span>
+                            <span>20:00</span>
+                        </div>
+                        <div>
+                            <input type="range" value="30" max="100"
+                                style="width: 100%; height: 3px !important; border-radius: 3px; border: none; display: block;">
+                        </div>
+                    </div>
+                    <div style="align-self: flex-end;"><i class="fa fa-md fa-volume-up"></i></div>
+                </div>
+
+            </div>
+
+            <div class="x-card"
+                style="grid-column-start: 9; grid-column-end: 15; grid-row-start: 1; grid-row-end:9; background-color: var(--card-grey); border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.8em 1.8em;">
+                <div style="display: inline-flex; width: 100%; align-items: center; justify-content: space-between;">
+                    <h4 style="font-weight: 500;">profile</h4>
+                    <div><i class="la la-lg la-ellipsis-h"></i></div>
+                </div>
+                <div
+                    style="display: inline-flex; width: 100%; row-gap: 3px; justify-content: center; flex-direction: column; align-items: center; text-align: center;">
+                    <div style="width: 90px; height: 90px; margin-bottom: 8px; position: relative;">
+                        <img src="./Asset/mdee (3).png" alt="profile-dp-area"
+                            style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                        <img src="./Asset/blue-badge (5).png" alt="verified-badge"
+                            style="width: 27px; height: 27px; object-fit: cover; border-radius: 50%; border: 2px solid var(--card-grey); position: absolute; top: 4px; right: -5px;">
+                    </div>
+                    <h4 style="font-weight: 600;">Odewale Emmanuel</h4>
+                    <p class="grp-1">@odewale_mdee</p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1px 1fr;">
+                    <div style="flex-grow: 1; text-align: center;">
+                        <h2 style="font-weight: 400; font-size: 1.8em;">1,287k</h2>
+                        <p class="grp-1">Subscribers</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <div style="height: 60%; width: 1px; background-color: var(--grey5);">
+                        </div>
+                    </div>
+                    <div style="flex-grow: 1; text-align: center;">
+                        <h2 style="font-weight: 400; font-size: 1.8em;">213</h2>
+                        <p class="grp-1">Videos</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="x-card"
+                style="grid-column-start: 15; grid-column-end: -1; grid-row-start: 1; grid-row-end:9; background:  linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(212, 123, 5, 0.938)), url('./Asset/atb.jpg') no-repeat; background-size: cover; background-position: center; border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.2em 1.5em;">
+                <div style="display: flex;">
+                    <div style="margin-left: auto; color: var(--white);"><i class="la la-lg la-ellipsis-h"></i></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h2 style="font-size: 1.20em; font-weight: 600; color: var(--white);">Art Mastery Journey</h2>
+                    <div><i class="fa fa-2x fa-circle-play" style="color: var(--white);"></i></div>
+                </div>
+            </div>
+            <div class="x-card"
+                style="grid-column-start: 1; grid-column-end: 7; grid-row-start: 9; grid-row-end: 20 ; background-color: var(--white); border-radius: 25px; padding: 1.2em 1.5em; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="display: flex; flex-direction: column; row-gap: 5px; padding: 1em 1em 1.8em 1em; align-items: center; border-bottom: 2px dashed var(--grey5);"
+                    class="chopped-card">
+                    <div style="display: flex; justify-content: space-around; padding: .1em 0 .3em 0;">
+                        <img src="./Asset/green-badge (5).png" alt="green-verified-badge"
+                            style="width: 50px; height: 50px; border-radius: 50%; padding: 10px; background-color: var(--light-red); box-shadow: 2px 2px 5px rgba(77, 76, 76, 0.05) inset, 2px -2px 5px rgba(77, 76, 76, 0.05) inset;">
+                    </div>
+                    <h2>Thank you!</h2>
+                    <p class="grp">Your transaction was successful</p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr minmax(70px, auto); row-gap: 1.3em;">
+                    <div style="display: flex; flex-direction: column; row-gap: 5px;">
+                        <p style="text-transform: uppercase;" class="grp-2">transaction id</p>
+                        <span style="font-weight: 600;">021008007777</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; row-gap: 5px; justify-self: self-end;">
+                        <p style="text-transform: uppercase;" class="grp-2">amount</p>
+                        <span style="font-weight: 600;">$25.00</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; row-gap: 5px;">
+                        <p style="text-transform: uppercase;" class="grp-2">date & time</p>
+                        <div style="font-weight: 600; display: flex;  column-gap: 5px;">
+                            <p>17 Sep 2020</p>
+                            <span
+                                style="align-self: center; display: inline-block; border-radius: 50%; width: 3px; height: 3px; background-color: var(--black);"></span>
+                            <p>11:28 am</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="display: grid; grid-template-columns: 60px 1fr; column-gap: 1em; background-color: var(--card-grey); border-radius: 18px; padding: 1.2em 1em;">
+                    <div style="width: 60px; display: flex; align-items: center;">
+                        <img src="./Asset/MasterCard.png" alt="mastercard logo" width="100%">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 5px; justify-items: center;">
+                        <h4 style="font-weight: 500;">Maderlyn Korgsgaard</h4>
+                        <div style="font-weight: 700; display: flex; align-items: center;">
+                            <span>*</span>
+                            <span>*</span>
+                            <span>*</span>
+                            <span>*</span>
+                            <p style="font-weight: 500;">&nbsp;0025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="x-card"
+                style="grid-column-start: 7; grid-column-end: 14; grid-row-start: 9; grid-row-end: 18; background-color: var(--white); padding: 1.8em; border-radius: 25px; display: grid; grid-template-rows: auto auto 1fr; row-gap: 5px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p>Stats</p>
+                    <div
+                        style="display: flex; align-items: center; column-gap: 10px; padding: .3em .7em; border-radius: 15px; border: 1px solid var(--grey4);">
+                        <p>week </p><i class="fa fa-sm fa-angle-down"></i>
+                    </div>
+                </div>
+                <h1 style="font-size: 3.5em; font-weight: 700;">+35%</h1>
+            </div>
+
+            <div class="x-card"
+                style="grid-column-start: 14; grid-column-end: -1; grid-row-start: 9; grid-row-end: 17; background-color: var(--white); border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 1.8em;">
+                <div style="display: flex; justify-content: space-around; padding: .1em 0 .3em 0;">
+                    <img src="./Asset/mdee (3).png" alt="green-verified-badge"
+                        style="width: 90px; height: 90px; border-radius: 50%; padding: 20px; background-color: var(--light-red); box-shadow: 2px 2px 5px rgba(77, 76, 76, 0.05) inset, 2px -2px 5px rgba(77, 76, 76, 0.05) inset;">
+                </div>
+                <div>
+                    <p class="grp">Estimated revenue</p>
+                </div>
+                <div style="display: flex; flex-direction: column; row-gap: 5px; align-items: center;">
+                    <h1 style="font-size: 3.5em; font-weight: 700;">$10M</h1>
+                    <div
+                        style="display: flex; align-items: center; gap: 5px; width: 95px; background-color: var(--light-green); color: var(--green); font-weight: 500; padding: .4em .8em; border-radius: 15px;">
+                        <i class="la la-md la-external-link "></i>
+                        <p>$615K</p>
+                    </div>
+                </div>
+            </div>
+            <div class="x-card"
+                style="grid-column-start: 1; grid-column-end: 7; grid-row-start: 20; grid-row-end: -1; background-color: var(--grey7); border-radius: 25px; padding: 1.3em 1.5em; display: flex; flex-direction: column; justify-content: space-between; ">
+                <div
+                    style="border-bottom: 1px solid var(--grey4); display: grid; grid-template-columns: 32px 1fr; padding-bottom: .3em; align-items: center;">
+                    <div><i class="la la-search" style="font-size: 20px;"></i></div>
+                    <div
+                        style="display: grid; grid-template-columns: 1fr auto auto auto auto; align-items: center; grid-gap: .4em; ">
+                        <p class="grp-x">Music Video</p>
+                        <div><i class="la la-xl la-microphone" style="color: var(--blue); font-size: 20px;"></i></div>
+                        <div><i class="la la-xl la-image" style="color: var(--blue); font-size: 20px;"></i></div>
+                        <div
+                            style="height: 64%; margin: 0 0px 0 4px; width: 1px; background-color: var(--grey6); font-size: 20px;">
+                        </div>
+                        <div><i class="la la-xl la-times" style="font-size: 20px;"></i></div>
+                    </div>
+
+                </div>
+                <div style="display: grid; align-items: center; grid-template-columns: auto 1fr; column-gap: 10px;">
+                    <div><i class="la la-history" style="font-size: 20px;"></i></div>
+                    <p class="grp-x">Top 10 Music Videos 2024</p>
+                </div>
+            </div>
+            <div class="x-card"
+                style="grid-column-start: 7; grid-column-end: 14; grid-row-start: 18; grid-row-end: -1; background-color: var(--yellow); border-radius: 25px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.8em;">
+                <h3>choose your interests</h3>
+                <ul style="display: flex; flex-wrap: wrap; gap: 10px; list-style: none;">
+                    <li
+                        style="display: flex; align-items: center; column-gap: 5px; padding: .5em .8em; border-radius: 25px; border: 1px solid var(--grey6);">
+                        <i class="la la-md la-plus"></i>
+                        <p>Architecture</p>
+                    </li>
+                    <li
+                        style="display: flex; align-items: center; column-gap: 5px; padding: .5em .8em; border-radius: 25px; border: 1px solid var(--grey6);">
+                        <i class="la la-md la-plus"></i>
+                        <p>Beauty</p>
+                    </li>
+                    <li
+                        style="display: flex; align-items: center; column-gap: 5px; padding: .5em .8em; border-radius: 25px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.187), -3px -3px 15px rgba(92, 92, 92, 0.212); background-color: var(--black); color: var(--white);">
+                        <i class="la la-md la-check"></i>
+                        <p>Business</p>
+                    </li>
+                    <li
+                        style="display: flex; align-items: center; column-gap: 5px; padding: .5em .8em; border-radius: 25px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.187), -3px -3px 15px rgba(0, 0, 0, 0.387); background-color: var(--black); color: var(--white);">
+                        <i class="la la-md la-check"></i>
+                        <p>Car</p>
+                    </li>
+
+                    <li
+                        style="display: flex; align-items: center; column-gap: 5px; padding: .5em .8em; border-radius: 25px; border: 1px solid var(--grey6);">
+                        <i class="la la-md la-plus"></i>
+                        <p>Commnuication</p>
+                    </li>
+                    <li
+                        style="display: flex; align-items: center; column-gap: 5px; padding: .5em .8em; border-radius: 25px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.187), -3px -3px 15px rgba(0, 0, 0, 0.387); background-color: var(--black); color: var(--white);">
+                        <i class="la la-md la-check"></i>
+                        <p>Education</p>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="x-card"
+                style="grid-column-start: 14; grid-column-end: -1; grid-row-start: 17; grid-row-end: -1; background-color: var(--grey8); border-radius: 25px; display: flex; flex-direction: column; gap: 1em; padding: 1.8em;">
+                <p>Your subscribers</p>
+                <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 1.15em;">
+                    <div style="width: 55px; height: 55px; margin-bottom: 8px; position: relative;">
+                        <img src="./Asset/odewale_mdee.png" alt="profile-dp-area"
+                            style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                        <img src="./Asset/blue-badge (5).png" alt="verified-badge"
+                            style="width: 17px; height: 17px; object-fit: cover; border-radius: 50%; border: 2px solid var(--card-grey); position: absolute; top: 4px; right: -5px;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; row-gap: 5px;">
+                        <h4>Crafts corner</h4>
+                        <p class="grp-1">823K Subscribers</p>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 1.15em;">
+                    <div style="width: 55px; height: 55px; margin-bottom: 8px; position: relative;">
+                        <img src="./Asset/mdee (3).png" alt="profile-dp-area"
+                            style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                        <img src="./Asset/blue-badge (5).png" alt="verified-badge"
+                            style="width: 17px; height: 17px; object-fit: cover; border-radius: 50%; border: 2px solid var(--card-grey); position: absolute; top: 4px; right: -5px; display: none;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: center; row-gap: 5px;">
+                        <h4>Zone Explorers</h4>
+                        <p class="grp-1">75K Subscribers</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+</html>
