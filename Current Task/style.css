@@ -1590,13 +1590,14 @@ img.tool-box {
 
 /*---------------------- END OF FIX-SEC-2 SECTION -------------------- */
 
-/*----------------------- FIX-SECTION-2 ------------------------- */
+/*--------------------------- FIX-SECTION-2 --------------------------- */
 
 .fix-section-2 {
     grid-template-columns: 1.35fr 1fr;
     grid-template-rows: 15.87em 500px 4.5em;
     column-gap: 1.5em;
     transform: translateY(-20em);
+    margin: 0 auto;
     /* animate to 30 */
     animation: fixSection2Animate 1s ease-in-out .2s forwards;
 }
@@ -1744,3 +1745,304 @@ img.tool-box {
 }
 
 /*------------------------END OF FIX-SECTION-2 ------------------ */
+
+/* repair and join sections animate */
+.repair-services-section,
+.join-neato-section {
+    animation: moveAnimate 1s ease-in-out .2s forwards;
+}
+
+@keyframes moveAnimate {
+    0% {
+        transform: translateY(30em);
+    }
+
+    100% {
+        transform: translateY(-23em);
+    }
+}
+
+
+/*-------------------------- REPAIR SECTION ---------------------- */
+.repair-services-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.8em;
+    /* padding: 3em; */
+    width: 75%;
+    margin: 0 auto 12em auto;
+    /* border: 1px solid salmon; */
+}
+
+.repair-services {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 240px);
+    row-gap: .65em;
+    column-gap: .65em;
+}
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 1em;
+    background-color: var(--white, #ffffff);
+    border-radius: .95em;
+    padding: 1.5em;
+    min-height: 180px;
+}
+
+.service img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.service p {
+    font-family: var(--poppins);
+    font-size: calc(1em + .25vw);
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 1.25;
+}
+
+h1.repair-title {
+    font-size: calc(1.75em + .45vw);
+    font-weight: 400;
+    line-height: 1.15;
+    width: 80%;
+    margin: 0 auto;
+    animation: repairTitleAnimate 1.35s ease-in-out .2s forwards;
+}
+
+@keyframes repairTitleAnimate {
+    0% {
+        opacity: 0;
+        line-height: 2;
+        transform: translateY(6em);
+    }
+
+    100% {
+        opacity: 1;
+        line-height: 1.15;
+        transform: translateY(0);
+    }
+}
+
+.sv-1 {
+    animation: sv1-Animate 1.35s ease-in-out .2s forwards;
+}
+
+@keyframes sv1-Animate {
+    0% {
+        opacity: 0;
+        transform: scale(.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sv-2 {
+    animation: sv2-Animate 1.65s ease-in-out .2s forwards;
+}
+
+@keyframes sv2-Animate {
+    0% {
+        opacity: 0;
+        transform: scale(.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sv-3 {
+    animation: sv3-Animate 1.95s ease-in-out .2s forwards;
+}
+
+@keyframes sv3-Animate {
+    0% {
+        opacity: 0;
+        transform: scale(.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sv-4 {
+    animation: sv4-Animate 1.25s ease-in-out .2s forwards;
+}
+
+@keyframes sv4-Animate {
+    0% {
+        opacity: 0;
+        transform: scale(.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sv-5 {
+    animation: sv5-Animate 1.55s ease-in-out .2s forwards;
+}
+
+@keyframes sv5-Animate {
+    0% {
+        opacity: 0;
+        transform: scale(.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sv-6 {
+    animation: sv6-Animate 1.85s ease-in-out .2s forwards;
+}
+
+@keyframes sv6-Animate {
+    0% {
+        opacity: 0;
+        transform: scale(.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/*------------------------ END OF REPAIR SECTION ------------------ */
+
+/*------------------------ JOIN SECTION ------------------ */
+.join-neato-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6em;
+}
+
+.join-intro-images {
+    max-width: 500px;
+    min-height: 500px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: var(--secondaryGreen3);
+    position: relative;
+    overflow: hidden;
+}
+
+.join-intro-images li:first-child img {
+    width: 500px;
+    height: 500px;
+    transform: translateY(11em) scale(1.25);
+    object-fit: contain;
+    animation: joinPhoneAnimate 1.15s ease-in-out .2s forwards;
+}
+
+@keyframes joinPhoneAnimate {
+    0% {
+        transform: translateY(30em);
+    }
+
+    100% {
+        transform: translateY(11em);
+    }
+}
+
+.join-intro-images li:not(.join-intro-images li:first-child) {
+    position: absolute;
+    left: 47%;
+    top: 45%;
+}
+
+.join-neato {
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1em;
+}
+
+.join-neato>h2 {
+    animation: joinNeat-H2-Animate 1.35s ease-in-out .2s forwards;
+    font-size: calc(1.75em + .85vw);
+    font-weight: 400;
+}
+
+@keyframes joinNeato-H2-Animate {
+    0% {
+        transform: translateY(4em);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.join-neato>p {
+    animation: joinNeato-P-Animate 1.65s ease-in-out .2s forwards;
+    font-family: var(--roboto);
+    font-weight: 400;
+}
+
+@keyframes joinNeato-P-Animate {
+    0% {
+        transform: translateY(4em);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.join-neato>.button-group {
+    margin-top: 1em;
+    animation: joinNeatoBtnGrp-Animate 1.95s ease-in-out .2s forwards;
+}
+
+@keyframes joinNeatoBtnGrp-Animate {
+    0% {
+        transform: translateY(4em);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.join-neato>.button-group .button {
+    background-color: var(--green, #00613b);
+}
+
+.join-neato>.button-group .button * {
+    color: var(--white, #ffffff);
+}
+
+/*------------------------ END OF JOIN SECTION ------------------ */
