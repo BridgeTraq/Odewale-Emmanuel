@@ -1903,7 +1903,10 @@ h1.repair-title {
 }
 
 .sv-1 {
-    animation: sv1-Animate 1.35s ease-in-out .2s forwards;
+    animation: sv1-Animate linear .2s forwards;
+    /* animation: 1.35s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 @keyframes sv1-Animate {
@@ -1919,7 +1922,10 @@ h1.repair-title {
 }
 
 .sv-2 {
-    animation: sv2-Animate 1.65s ease-in-out .2s forwards;
+    animation: sv2-Animate linear .2s forwards;
+    /* animation: 1.65s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 @keyframes sv2-Animate {
@@ -1935,7 +1941,10 @@ h1.repair-title {
 }
 
 .sv-3 {
-    animation: sv3-Animate 1.95s ease-in-out .2s forwards;
+    animation: sv3-Animate linear .2s forwards;
+    /* animation: 1.95s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 @keyframes sv3-Animate {
@@ -1951,7 +1960,10 @@ h1.repair-title {
 }
 
 .sv-4 {
-    animation: sv4-Animate 1.25s ease-in-out .2s forwards;
+    animation: sv4-Animate linear .2s forwards;
+    /* animation: 1.25s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 @keyframes sv4-Animate {
@@ -1967,7 +1979,10 @@ h1.repair-title {
 }
 
 .sv-5 {
-    animation: sv5-Animate 1.55s ease-in-out .2s forwards;
+    animation: sv5-Animate linear .2s forwards;
+    /* animation: 1.55s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 @keyframes sv5-Animate {
@@ -1983,7 +1998,10 @@ h1.repair-title {
 }
 
 .sv-6 {
-    animation: sv6-Animate 1.85s ease-in-out .2s forwards;
+    animation: sv6-Animate linear .2s forwards;
+    /* animation: 1.85s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 @keyframes sv6-Animate {
@@ -2027,7 +2045,7 @@ h1.repair-title {
     transform: translateY(11em) scale(1.25);
     object-fit: contain;
     animation: joinPhoneAnimate ease-in-out .2s forwards;
-    animation: 1.05s;
+    animation-duration: 1.05s;
     /* animation-timeline: view();
       animation-range: entry 0% cover 35%; */
 }
