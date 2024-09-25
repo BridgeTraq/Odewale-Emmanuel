@@ -34,6 +34,8 @@
 body {
     font-family: var(--quicksand);
     background-color: var(--bg, #f4f2ec);
+    padding-bottom: 10em;
+
 }
 
 h1,
@@ -777,7 +779,11 @@ li.right-nail-2 img {
     font-weight: 400;
     letter-spacing: -2px;
     line-height: 1.05;
-    animation: baseText1Animate .85s ease-in-out .05s forwards;
+    animation: baseText1Animate ease-in-out .05s forwards;
+    animation-duration: .85s;
+    animation-timeline: view(30% 0%);
+    /* animation-range: 10vh 75vh; */
+
 }
 
 @keyframes baseText1Animate {
@@ -798,7 +804,10 @@ li.right-nail-2 img {
     display: flex;
     flex-direction: column;
     row-gap: 3em;
-    animation: baseText2Animate .85s ease-in-out .05s forwards;
+    animation: baseText2Animate ease-in-out .05s forwards;
+    animation-duration: .85s;
+    /* animation-timeline: view(); */
+    /* animation-range: 10vh 75vh; */
 }
 
 @keyframes baseText2Animate {
@@ -852,7 +861,21 @@ img.tool-box {
     height: 400px;
     aspect-ratio: 4/4;
     object-fit: contain;
+    animation: toolBoxAimate linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 }
+
+@keyframes toolBoxAimate {
+    0% {
+        transform: scale(.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 .steps-section>h2 {
     width: 80%;
@@ -862,7 +885,9 @@ img.tool-box {
     font-weight: 500;
     line-height: 1.25;
     text-align: center;
-    animation: titleAnimate .8s ease-in-out 0.2s forwards;
+    animation: titleAnimate ease-in-out 0.2s forwards;
+    /* animation-duration: .8s; */
+    animation-timeline: view();
 }
 
 @keyframes titleAnimate {
@@ -935,10 +960,11 @@ img.tool-box {
     flex-direction: column;
     row-gap: 1.45em;
     margin: auto;
-    animation: stepIntroAnimate .8s ease-in-out 0.2s forwards;
+    animation: stepIntroAnimate ease-in-out 0.2s forwards;
+    animation-duration: .8s;
+    /* animation-timeline: view(30%); */
+
 }
-
-
 
 @keyframes stepIntroAnimate {
 
@@ -948,7 +974,6 @@ img.tool-box {
 
     100% {
         transform: translateY(0);
-
     }
 }
 
@@ -964,9 +989,11 @@ img.tool-box {
     /* letter-spacing: -2px; */
     line-height: 1.35;
     font-weight: 400;
-    animation: stepIntroTextAnimate .8s ease-in-out 0.2s forwards;
-}
+    animation: stepIntroTextAnimate ease-in-out 0.2s forwards;
+    animation-duration: .8s;
+    /* animation-timeline: view(30%); */
 
+}
 
 @keyframes stepIntroTextAnimate {
 
@@ -1075,7 +1102,9 @@ img.tool-box {
 
 
 .step:not(.step-intro) {
-    animation: stepsAnimate .65s ease-in-out 0.2s forwards;
+    animation: stepsAnimate ease-in-out 0.2s forwards;
+    animation-duration: .65s;
+    /* animation-timeline: view(); */
 }
 
 @keyframes stepsAnimate {
@@ -1092,10 +1121,18 @@ img.tool-box {
 
 /*----------------------END OF STEP SECTION -------------------- */
 
+.fix-section-1 {
+    background-color: var(--darK, #262626);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    margin-bottom: 35em;
+}
+
 /*----------------------------  FIX-SEC-1  --------------------------- */
 
 .fix-sec-1 {
-    background-color: var(--darK, #262626);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -1147,7 +1184,9 @@ img.tool-box {
     letter-spacing: -1px;
     line-height: 1;
     font-weight: 400;
-    animation: fixTitleAnimate .7s ease-in-out .7s forwards;
+    animation: fixTitleAnimate ease-in-out .7s forwards;
+    /* animation-duration: .7s; */
+    animation-timeline: view(15% 0%);
 
 }
 
@@ -1174,7 +1213,9 @@ img.tool-box {
     color: #f5f5f5d9;
     font-weight: 300;
     line-height: 1.65;
-    animation: fixDetailsAnimate 1.5s ease-in-out 0.2s forwards;
+    animation: fixDetailsAnimate ease-in-out 0.2s forwards;
+    /* animation-duration: 1.5s; */
+    animation-timeline: view(15% 0%);
 
 }
 
@@ -1480,14 +1521,13 @@ img.tool-box {
 
 /*-------------------------- FIX-SEC-2 ------------------------- */
 .fix-sec-2 {
-    background-color: var(--darK, #262626);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     row-gap: 3em;
-    padding: 12em 0 50em 0;
+    margin: 12em 0 40em 0;
 
 }
 
@@ -1499,7 +1539,11 @@ img.tool-box {
     font-size: calc(1.5em + .95vw);
     letter-spacing: -1px;
     font-weight: 400;
-    animation: fix2TitleAnimate .85s ease-in-out .2s forwards;
+    animation: fix2TitleAnimate linear .2s forwards;
+    /* animation-duration: .85s; */
+    animation-timeline: view();
+    animation-range: entry 10% cover 60%;
+
 }
 
 @keyframes fix2TitleAnimate {
@@ -1547,7 +1591,11 @@ img.tool-box {
 }
 
 .fix-sec-2 .cards .card-1 {
-    animation: card1Animate 1.1s ease-in-out .2s forwards;
+    animation: card1Animate linear .2s forwards;
+    /* animation-duration: 1.1s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+
 }
 
 @keyframes card1Animate {
@@ -1561,7 +1609,10 @@ img.tool-box {
 }
 
 .fix-sec-2 .cards .card-2 {
-    animation: card2Animate 1.15s ease-in-out .2s forwards;
+    animation: card2Animate linear .2s forwards;
+    /* animation-duration: 1.15s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 @keyframes card2Animate {
@@ -1575,7 +1626,10 @@ img.tool-box {
 }
 
 .fix-sec-2 .cards .card-3 {
-    animation: card3Animate 1.25s ease-in-out .2s forwards;
+    animation: card3Animate linear .2s forwards;
+    /* animation-duration: 1.25s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
 }
 
 @keyframes card3Animate {
@@ -1596,21 +1650,32 @@ img.tool-box {
     grid-template-columns: 1.35fr 1fr;
     grid-template-rows: 15.87em 500px 4.5em;
     column-gap: 1.5em;
-    transform: translateY(-20em);
+    position: absolute;
+    bottom: 0;
+    transform: translateY(30em);
     margin: 0 auto;
-    /* animate to 30 */
-    animation: fixSection2Animate 1s ease-in-out .2s forwards;
+    animation: fixSection2Animate linear .2s forwards;
+    /* animation-duration: 1s; */
+    animation-timeline: view(0% 100%);
+    animation-range: entry 0% cover 50%;
+    /* 20% */
+    /* 0% 50% */
+    /* play around with the X and Y values for view() */
+
+    /* animation-play-state: paused; */
+
 }
 
 @keyframes fixSection2Animate {
     0% {
-        transform: translateY(10em);
+        transform: translateY(50em);
     }
 
     100% {
-        transform: translateY(-30em);
+        transform: translateY(20em);
     }
 }
+
 
 .fix-section-2 .phone-section {
     z-index: 1;
@@ -1627,6 +1692,9 @@ img.tool-box {
     margin: 0 auto 0 8.5em;
     background-color: var(--white);
     animation: phone2Animate 1.25s ease-in-out .2s forwards;
+    /* animation: 1.25s; */
+    /* animation-timeline: view();
+    animation-range: entry 0% cover 35%; */
 }
 
 @keyframes phone2Animate {
@@ -1638,7 +1706,6 @@ img.tool-box {
 
     65% {
         visibility: visible;
-
     }
 
     100% {
@@ -1670,7 +1737,7 @@ img.tool-box {
     font-weight: 500;
     letter-spacing: -2px;
     line-height: 1.15;
-    animation: phoneBaseTitle2 1.25s ease-in-out .2s forwards;
+    animation: phoneBaseTitle2 1.25s ease-in-out .35s forwards;
 
 }
 
@@ -1698,7 +1765,7 @@ img.tool-box {
     width: 90%;
     margin-right: auto;
     line-height: 1.45;
-    animation: phoneBaseText2 1.25s ease-in-out .2s forwards;
+    animation: phoneBaseText2 1.25s ease-in-out .5s forwards;
 }
 
 @keyframes phoneBaseText2 {
@@ -1715,7 +1782,7 @@ img.tool-box {
 
 
 .fix-section-2 .base-item-1>div.button-group {
-    animation: phoneBaseBtnGrp22 1.25s ease-in-out .2s forwards;
+    animation: phoneBaseBtnGrp2 1.25s ease-in-out .4s forwards;
     justify-content: flex-start;
 }
 
@@ -1723,7 +1790,7 @@ img.tool-box {
     0% {
         transform: translateY(12em);
         opacity: .5;
-        visibility: hidden;
+        /* visibility: hidden; */
     }
 
     50% {
@@ -1752,7 +1819,9 @@ img.tool-box {
     animation: moveAnimate 1s ease-in-out .2s forwards;
 }
 
-@keyframes moveAnimate {
+
+/* FIX EXTRA SPACE HERE */
+/* @keyframes moveAnimate {
     0% {
         transform: translateY(30em);
     }
@@ -1760,7 +1829,7 @@ img.tool-box {
     100% {
         transform: translateY(-23em);
     }
-}
+} */
 
 
 /*-------------------------- REPAIR SECTION ---------------------- */
@@ -1813,7 +1882,10 @@ h1.repair-title {
     line-height: 1.15;
     width: 80%;
     margin: 0 auto;
-    animation: repairTitleAnimate 1.35s ease-in-out .2s forwards;
+    animation: repairTitleAnimate linear .2s forwards;
+    /* animation: 1.35s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 @keyframes repairTitleAnimate {
@@ -1954,7 +2026,10 @@ h1.repair-title {
     height: 500px;
     transform: translateY(11em) scale(1.25);
     object-fit: contain;
-    animation: joinPhoneAnimate 1.15s ease-in-out .2s forwards;
+    animation: joinPhoneAnimate ease-in-out .2s forwards;
+    animation: 1.05s;
+    /* animation-timeline: view();
+      animation-range: entry 0% cover 35%; */
 }
 
 @keyframes joinPhoneAnimate {
@@ -1963,7 +2038,7 @@ h1.repair-title {
     }
 
     100% {
-        transform: translateY(11em);
+        transform: translateY(8em);
     }
 }
 
@@ -1985,9 +2060,12 @@ h1.repair-title {
 }
 
 .join-neato>h2 {
-    animation: joinNeat-H2-Animate 1.35s ease-in-out .2s forwards;
     font-size: calc(1.75em + .85vw);
     font-weight: 400;
+    animation: joinNeato-H2-Animate linear .2s forwards;
+    /* animation: 1.15s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 @keyframes joinNeato-H2-Animate {
@@ -2003,14 +2081,17 @@ h1.repair-title {
 }
 
 .join-neato>p {
-    animation: joinNeato-P-Animate 1.65s ease-in-out .2s forwards;
     font-family: var(--roboto);
     font-weight: 400;
+    animation: joinNeato-P-Animate linear .2s forwards;
+    /* animation: 1.4s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 @keyframes joinNeato-P-Animate {
     0% {
-        transform: translateY(4em);
+        transform: translateY(7em);
         opacity: 0;
     }
 
@@ -2022,12 +2103,15 @@ h1.repair-title {
 
 .join-neato>.button-group {
     margin-top: 1em;
-    animation: joinNeatoBtnGrp-Animate 1.95s ease-in-out .2s forwards;
+    animation: joinNeatoBtnGrp-Animate linear .2s forwards;
+    /* animation: 1.425s; */
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }
 
 @keyframes joinNeatoBtnGrp-Animate {
     0% {
-        transform: translateY(4em);
+        transform: translateY(9em);
         opacity: 0;
     }
 
