@@ -781,8 +781,8 @@ li.right-nail-2 img {
     line-height: 1.05;
     animation: baseText1Animate ease-in-out .05s forwards;
     animation-duration: .85s;
-    animation-timeline: view(30% 0%);
-    /* animation-range: 10vh 75vh; */
+    /* animation-timeline: view(); */
+    /* animation-range: entry 0% cover 30%; */
 
 }
 

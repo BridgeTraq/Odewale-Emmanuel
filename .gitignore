@@ -1,0 +1,45 @@
+# dependencies
+/Current Task/edutech/node_modules
+/Current Task/edutech/.pnp
+/Current Task/edutech.pnp.js
+
+# testing
+/Current Task/edutech/coverage
+
+# production
+/Current Task/edutech/build
+
+# misc
+/Current Task/edutech.DS_Store
+/Current Task/edutech.env.local
+/Current Task/edutech.env.development.local
+/Current Task/edutech.env.test.local
+/Current Task/edutech.env.production.local
+
+/Current Task/edutechnpm-debug.log*
+/Current Task/edutechyarn-debug.log*
+/Current Task/edutechyarn-error.log*
+
+
+
+# dependencies
+Current Task/edutech/node_modules
+Current Task/edutech/.pnp
+Current Task/edutech/.pnp.js
+
+# testing
+Current Task/edutech/coverage
+
+# production
+Current Task/edutech/build
+
+# misc
+Current Task/edutech/.DS_Store
+Current Task/edutech/.env.local
+Current Task/edutech/.env.development.local
+Current Task/edutech/.env.test.local
+Current Task/edutech/.env.production.local
+
+Current Task/edutech/npm-debug.log*
+Current Task/edutech/yarn-debug.log*
+Current Task/edutech/yarn-error.log*
